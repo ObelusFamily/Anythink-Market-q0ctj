@@ -11,3 +11,8 @@ When implementing a new feature or fixing a bug, please create a new pull reques
 ## First setup
 
 **[TODO 05/01/2018 @vanessa-cooper]:** _It's been a while since anyone ran a fresh copy of this repo. I think it's worth documenting the steps needed to install and run the repo on a new machine?_
+
+- Enter the project folder and create the dockers container with `docker-compose up`, it will take a while.
+- After finishing the docker setup search in your browser http://localhost:3000/api/ping.
+- If theres is an error with active record migrations just click in run db migrations in the browser and should be fixed.
+- Now go to http://localhost:3001/register and register and you are set.
