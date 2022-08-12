@@ -16,6 +16,10 @@ class ItemsController < ApplicationController
 
     @items = @items.order(created_at: :desc).offset(params[:offset] || 0).limit(params[:limit] || 100)
 
+    if !params[:title].empty?
+      @item = @item.where(title: params[:title])
+    end
+    
     render json: {
       items: @items.map { |item|
         {
@@ -46,6 +50,10 @@ class ItemsController < ApplicationController
     @items_count = @items.count
 
     @items = @items.order(created_at: :desc).offset(params[:offset] || 0).limit(params[:limit] || 20)
+
+    if !params[:title].empty?
+    @item = @item.where(title: params[:title])
+    end
 
     render :index
   end
