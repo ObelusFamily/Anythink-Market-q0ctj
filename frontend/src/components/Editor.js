@@ -123,6 +123,7 @@ class Editor extends React.Component {
                       placeholder="Image url"
                       value={this.props.image}
                       onChange={this.changeImage}
+                      required={true}
                     />
                   </fieldset>
 
